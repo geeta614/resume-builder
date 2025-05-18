@@ -1,0 +1,192 @@
+/* 📌 Font & Base Setup */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #1a1a2e, #16213e);
+  color: #f1f1f1;
+  padding: 50px 20px;
+}
+
+/* 💼 Form Container */
+form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* 🧠 Inputs & Textareas */
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  font-size: 15px;
+  font-family: inherit;
+  color: #2c3e50;
+  background-color: #ffffff;
+  border: 2px solid #00cfc8;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 207, 200, 0.2);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #19191a;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #f8f9fa;
+  border-color: #1cb5e0;
+  box-shadow: 0 0 0 3px rgba(0, 207, 200, 0.3);
+}
+
+/* 🎯 Buttons */
+button {
+  background: linear-gradient(to right, #00cfc8, #1cb5e0);
+  color: white;
+  padding: 12px 24px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #00b8a9, #1983bd);
+}
+
+/* ❌ Remove Button */
+.remove-btn {
+  background-color: #ff4d6d;
+  color: white;
+  padding: 6px 14px;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff1e47;
+}
+
+/* ✂️ Section Separator */
+hr {
+  border: none;
+  height: 2px;
+  background: rgb(24, 202, 211);
+  margin: 35px 0;
+  border-radius: 2px;
+}
+
+/* 🧠 Headings */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #00cfc8;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+/* 📌 Paragraphs & Lists */
+p, ul {
+  color: #f8f9fa;
+}
+
+/* 🖨️ Force black and white for PDF export */
+.bw-print * {
+  color: #000 !important;
+  background: #fff !important;
+  filter: grayscale(100%) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border-color: #000 !important;
+}
+
+/* 📄 Compact layout for PDF or preview */
+.pdf-compact * {
+  font-size: 95% !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.pdf-compact h1,
+.pdf-compact h2,
+.pdf-compact h3,
+.pdf-compact h4,
+.pdf-compact p,
+.pdf-compact li {
+  margin: 2px 0 !important;
+  padding: 0 !important;
+}
+
+.pdf-compact hr {
+  margin: 5px 0 !important;
+  border: 0.25px solid #aaa !important;
+  background: none !important;
+  height: 0 !important;
+}
+
+.pdf-compact hr {
+  margin: 5px 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #000 !important;
+  height: 0 !important;
+  background: none !important;
+}
+
+.pdf-compact input,
+.pdf-compact textarea {
+  padding: 6px 10px !important;
+  font-size: 85% !important;
+}
+
+.pdf-compact button,
+.pdf-compact .remove-btn {
+  display: none !important;
+}
+
+.ats-optimized {
+  font-family: Arial, sans-serif !important;
+  color: #000 !important;
+  background: #fff !important;
+  line-height: 1.4;
+  font-size: 12pt;
+}
+
+.ats-optimized h1, .ats-optimized h2, .ats-optimized h3 {
+  font-weight: bold;
+  color: #000 !important;
+}
+
+.ats-optimized ul {
+  list-style-type: disc;
+  margin-left: 1.5em;
+}
+
+.ats-optimized a {
+  color: #000 !important;
+  text-decoration: none;
+}

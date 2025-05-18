@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <h1>Resume Builder</h1>
+
+  <form id="resumeForm" onsubmit="event.preventDefault(); generatePreview();">
+
+    <h2>Personal Information <span style="color:red;">*</span></h2>
+    <input id="name" placeholder="Full Name" required />
+    <input id="email" type="email" placeholder="Email" required />
+    <input id="phone" placeholder="Phone Number" required />
+    <input id="linkedin" placeholder="LinkedIn URL (optional)" />
+    <input id="github" placeholder="GitHub URL (optional)" />
+    <input id="leetcode" placeholder="LeetCode URL (optional)" />
+
+    <hr />
+
+    <h2>Education <span style="color:red;">*</span></h2>
+    <input id="college" placeholder="University Name" required />
+    <input id="degree" placeholder="Degree" required />
+    <input id="duration1" placeholder="Duration (e.g., 2022 - 2026)" required />
+    <input id="cgpa" placeholder="CGPA" required />
+
+    <input id="school12" placeholder="Class 12 School (optional)" />
+    <input id="duration12" placeholder="Year (optional)" />
+    <input id="percent12" placeholder="Percentage (optional)" />
+
+    <input id="school10" placeholder="Class 10 School (optional)" />
+    <input id="duration10" placeholder="Year (optional)" />
+    <input id="percent10" placeholder="Percentage (optional)" />
+
+    <hr />
+
+    <h2>Projects (optional)</h2>
+    <div id="projectsContainer">
+      <div class="project-entry">
+        <input class="projectTitle" placeholder="Project Title (optional)" />
+        <input class="projectGit" placeholder="Project GitHub URL (optional)" />
+        <input class="projectLink" placeholder="Project Live URL (optional)" />
+        <input class="projectDate" placeholder="Completion Date (e.g. Jan 2025) (optional)" />
+        <textarea class="projectPoints" placeholder="Project points (separate with *) (optional)"></textarea>
+        <input class="techStack" placeholder="Tech Stack (optional)" />
+        <button type="button" class="remove-btn" onclick="removeProject(this)">❌ Remove</button>
+      </div>
+    </div>
+    <button type="button" onclick="addProject()">+ Add Project</button>
+
+    <hr />
+
+    <h2>Experience (optional)</h2>
+    <div id="experienceContainer">
+      <div class="experience-entry">
+        <input class="jobRole" placeholder="Job Role (optional)" />
+        <input class="jobOrg" placeholder="Organization (optional)" />
+        <input class="jobDuration" placeholder="Duration (optional)" />
+        <textarea class="jobDesc" placeholder="What did you do? (separate with *) (optional)"></textarea>
+        <button type="button" class="remove-btn" onclick="removeExperience(this)">❌ Remove</button>
+      </div>
+    </div>
+    <button type="button" onclick="addExperience()">+ Add Experience</button>
+
+    <hr />
+
+    <h2>Technical Skills <span style="color:red;">*</span></h2>
+    <input id="languages" placeholder="Languages (separate with ,)" required />
+    <input id="tools" placeholder="Tools (separate with ,)" required />
+    <input id="courseWork" placeholder="Course Work (separate with ,)" required />
+
+    <hr />
+
+    <h2>Positions of Responsibility (optional)</h2>
+    <textarea id="positions" placeholder="List positions of responsibility (separate with *)"></textarea>
+
+    <hr />
+
+    <h2>Achievements (optional)</h2>
+    <textarea id="achievements" placeholder="List achievements (separate with *)"></textarea>
+
+    <hr />
+
+    <h2>Certifications (optional)</h2>
+    <textarea id="certifications" placeholder="List certifications (separate with *)"></textarea>
+
+    <button type="submit">Generate Preview</button>
+    <button type="button" id="downloadBtn" onclick="downloadPDF()" style="display: none;">Download PDF</button>
+
+  </form>
+
+  <!-- HIDDEN TEMPLATE FOR PDF -->
+  <div id="resumeTemplate" style="display:none;"></div>
+
+  <script src="script.js"></script>
+  <hr>
+
+  <footer style="text-align: center; margin-top: 40px; font-size: 0.9em;">
+    <p>Need help or have feedback?</p>
+    <p>
+      <a href="https://www.linkedin.com/in/geeta-garg614/" target="_blank" rel="noopener noreferrer">
+        Contact the Developer on LinkedIn
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
